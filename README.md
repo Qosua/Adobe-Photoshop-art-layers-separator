@@ -1,0 +1,1 @@
+# Adobe-Photoshop-art-layers-separator
