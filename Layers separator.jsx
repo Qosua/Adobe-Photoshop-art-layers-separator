@@ -134,7 +134,12 @@ function process() {
 }
 
 function saveDocumentAsPNG(path) {
-	app.activeDocument.saveAs(new File(path), new PNGSaveOptions());
+    var opts = new PNGSaveOptions();
+
+    opts.compression = 7;        
+    opts.interlaced = false;
+
+    app.activeDocument.saveAs(new File(path), opts, true);
 }
 
 function saveDocumentAsPSD(path) {
